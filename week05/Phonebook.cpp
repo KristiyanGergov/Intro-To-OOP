@@ -73,6 +73,22 @@ void Phonebook::copy(const Phonebook & other)
 		this->arr[i] = other.arr[i];
 }
 
+Phonebook operator+(const Phonebook & pb1, const Phonebook &pb2)
+{
+	Phonebook result = Phonebook(pb1.capacity + pb2.capacity);
+	result.size = pb1.size + pb2.size;
+
+	for (size_t i = 0; i < pb1.size; i++) {
+		result.arr[i] = pb1.arr[i];
+	}
+
+	for (size_t i = 0; i < pb2.size; i++) {
+		result.arr[pb1.size + i] = pb2.arr[i];
+	}
+
+	return result;
+}
+
 ostream & operator<<(ostream os, const Phonebook & pb)
 {
 	for (size_t i = 0; i < pb.size; i++)
