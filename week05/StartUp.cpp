@@ -11,6 +11,6 @@ int main() {
 	PhoneType t = personal;
 	PhoneType t2 = personal;
 
-	Phonebook phonebook = Phonebook(5, 6, ph);
+	Phonebook phonebook = Phonebook();
 	return 0;
 }

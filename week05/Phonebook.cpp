@@ -93,4 +93,5 @@ ostream & operator<<(ostream os, const Phonebook & pb)
 {
 	for (size_t i = 0; i < pb.size; i++)
 		os << pb.arr[i];
+	return os;
 }
