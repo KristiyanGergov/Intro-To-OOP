@@ -71,6 +71,8 @@ bool Set<T>::contains(const T & value) const
 template<typename T>
 Set<T> & Set<T>::add(const T & value)
 {
+	if (contains(value))
+		return *this;
 	if (size == capacity)
 		expand();
 	arr[size] = value;
