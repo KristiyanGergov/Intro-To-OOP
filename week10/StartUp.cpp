@@ -1,13 +1,15 @@
 #include "Person.h"
 #include "Professor.h"
+#include "TaxiDriver.h"
 
 #include <iostream>
 
 using namespace std;
 int main() {
-	Professor professor = Professor("Gosho", 43, 10);
+	Person professor = Professor("Gosho", 43, 10);
+	Person taxiDriver = TaxiDriver("Shiso", 45, "bmw");
+	
+	taxiDriver.greet();
 
-	professor.setName("qko");
-	cout << professor << endl;
 	return 0;
 }
