@@ -94,7 +94,7 @@ int IntArray::operator[](const int index) const
 ostream & operator<<(ostream & os, const IntArray &arr)
 {
 	os << "[";
-	for (size_t i = 0; i < arr.size; i++) {
+	for (int i = 0; i < arr.size; i++) {
 		os << arr[i];
 		if (i == arr.size - 1) {
 			os << "]";

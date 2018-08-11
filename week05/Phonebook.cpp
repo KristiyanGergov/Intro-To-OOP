@@ -1,6 +1,8 @@
 #include "Phonebook.h"
 #include <cstring>
+#include <iostream>
 
+using namespace std;
 
 Phonebook::Phonebook(size_t capacity)
 {
@@ -61,6 +63,8 @@ PhonebookRecord Phonebook::find(const char * query)
 	for (size_t i = 0; i < size; i++)
 		if (strcmp(query, arr[i].getName()) == 0)
 			return arr[i];
+	cout << "Item" << query << " not found" << endl;
+	return PhonebookRecord();
 }
 
 void Phonebook::copy(const Phonebook & other)
