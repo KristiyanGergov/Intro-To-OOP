@@ -6,10 +6,16 @@ using namespace std;
 const int Button::SIZE_X = 250;
 const int Button::SIZE_Y = 100;
 
-
-Button::Button(Color color, double x, double y) : View(x, y, SIZE_X, SIZE_Y), color(color)
+Button::~Button()
 {
+	cout << "Destructing view at " << (long)this << endl;
+}
 
+Button::Button(const Color & color, double x, double y)
+{
+	this->x = x;
+	this->y = y;
+	this->color = color;
 }
 
 void Button::draw() const
